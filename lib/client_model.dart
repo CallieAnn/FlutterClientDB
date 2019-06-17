@@ -24,16 +24,16 @@ class Client {
   });
 
   factory Client.fromJson(Map<String, dynamic> json) => new Client(
-    id: json["id"],
-    firstName: json["first_name"],
-    lastName: json["last_name"],
-    blocked: json["blocked"],
-  );
+        id: json["id"],
+        firstName: json["first_name"],
+        lastName: json["last_name"],
+        blocked: json["blocked"] == 1,
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "first_name": firstName,
-    "last_name": lastName,
-    "blocked": blocked,
-  };
+        "id": id,
+        "first_name": firstName,
+        "last_name": lastName,
+        "blocked": blocked,
+      };
 }
